@@ -5,3 +5,11 @@ date: "2022-09-01"
 output: html_document
 ---
 Hello World.
+
+#Commands
+#git status
+#git add -A
+#git status
+#git commit -am 'add assignment1'
+#git status
+#git push
