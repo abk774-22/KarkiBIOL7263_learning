@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-author: "Anand B.Karki, Ph.D."
+author: "Anand B. Karki, Ph.D."
 date: "`r Sys.Date()`"
 output: 
  html_document:
