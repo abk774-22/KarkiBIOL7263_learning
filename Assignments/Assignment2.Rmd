@@ -27,12 +27,15 @@ University of Tulsa, Tulsa, OK
 
   1. **Molecular characterization of plasmids from foodborne pathogens**  
 
-![FIGURE 1. Different types of plasmids identified in our study. Circular Figure represents the pangenome analysis for all plasmid sequences from our laboratory. Individual slot (circle) in the figure represent one plasmid sequence. Pangenome analysis for all plasmid sequences was completed with GView server.](image/Fig 1.jpeg)  
+![FIGURE_1](image/Fig 1.jpeg)
+
 FIGURE 1. Different types of plasmids identified in our study. Circular Figure represents the pangenome analysis for all plasmid sequences from our laboratory. Individual slot (circle) in the figure represent one plasmid sequence. Pangenome analysis for all plasmid sequences was completed with GView server.  
 
   2. **Stress response mechanism of foodborne pathogens**  
 
 ![Fig_2](image/Fig 2.jpeg)  
+
+
 FIGURE 2. Screening for aerotolerant *Campylobacter* strains by incubating in MHB aerobically with agitation. (A) Hyper-aerotolerant *C. coli* and *C. jejuni* (circled) strains surviving a 24 h exposure to aerobic growth conditions. (B) Aerotolerant *C. coli* and *C. jejuni* (circled) strains surviving a 12 h exposure to aerobic conditions. Aerosensitive (C) *C. jejuni* and (D) *C. coli* strains not surviving the 12 h exposure to aerobic conditions. Error bars represent the mean standard error of triplicate experiments.  
 
   3. **Molecular detection of foodborne pathogens**  
