@@ -49,6 +49,6 @@ Table 1. List of Assignments.
 
 | Date | Descriptive Name | Assignment Link
 | :-- | :-- | :--
-|Septmeber 1, 2022 | Preparation of Gihub repository and Rmarkdown | [Assignment_1](Assignments/Assignment1.html)  
-|Septmeber 9, 2022 | Rmarkdown, Themes | [Assignment_2](Assignments/Assignment2.html)
-
+|September 1, 2022 | Preparation of Gihub repository and Rmarkdown | [Assignment_1](Assignments/Assignment1.html)  
+|September 9, 2022 | Rmarkdown, Themes | [Assignment_2](Assignments/Assignment2.html)
+|September 20, 2022 | Regular Expression | [Assignment_3] (Assignments/Assignment_3.html) 

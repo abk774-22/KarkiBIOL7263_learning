@@ -1,0 +1,157 @@
+---
+title: "Assignment 3"
+author: "Anand B.Karki, Ph.D."
+date: "`r Sys.Date()`"
+output: 
+ html_document:
+   theme: cerulean
+   toc: true
+   toc_float: true
+
+---
+
+---
+
+### Regular expression challange 
+
+**TASK 1**
+
+**Input**
+```
+Candidate Choice    Absentee Mail   Early Voting    Election Day    Total Votes
+TODD RUSS   7,021   8,194   135,216   150,431
+CLARK JOLLEY    7,012   5,835   107,714   120,561
+```
+Regression expression used
+
+1. **Removing `,` in the numbers**: Find `,` and replace with nothing.
+
+2. **Removing  multiple spaces and replacing with `,` followed by one space**: Find `\s[ ]+` and replace with `,` followed by one space.
+
+
+**Output**
+```
+Candidate Choice, Absentee Mail, Early Voting, Election Day, Total Votes
+TODD RUSS, 7021, 8194, 135216, 150431
+CLARK JOLLEY, 7012, 5835, 107714, 120561 
+```
+
+**TASK 2**
+
+**Input**
+```
+Adamic, Emily M.    ema3896@utulsa.edu
+Bierbaum, Emily L.  elb0588@utulsa.edu
+Cartmell, Laci J.   ljc454@utulsa.edu
+Delaporte, Elise    eld0070@utulsa.edu
+Hansen, Rebekah E.  reh9623@utulsa.edu
+Herrboldt, Madison A.   mah1626@utulsa.edu
+Lewis, Cari D.  cdl5261@utulsa.edu
+Mierow, Tanner T.   ttm5619@utulsa.edu
+Naranjo, Daniel S.  dsn8679@utulsa.edu
+Paslay, Caleb   cap1050@utulsa.edu
+Pletcher, Olivia M. omp9336@utulsa.edu
+West, Amy C.    acw1471@utulsa.edu
+```
+Regression expression used
+
+1. Find `(\w+),\s+(\w+).[^X].\s+(\w+@\w+.\w+)` and replace with `\2 \1 (\3)`
+
+**Output**
+```
+Emily Adamic (ema3896@utulsa.edu)
+Emily Bierbaum (elb0588@utulsa.edu)
+Laci Cartmell (ljc454@utulsa.edu)
+Elise Delaporte (eld0070@utulsa.edu)
+Rebekah Hansen (reh9623@utulsa.edu)
+Madison Herrboldt (mah1626@utulsa.edu)
+Cari Lewis (cdl5261@utulsa.edu)
+Tanner Mierow (ttm5619@utulsa.edu)
+Daniel Naranjo (dsn8679@utulsa.edu)
+Cale Paslay (cap1050@utulsa.edu)
+Olivia Pletcher (omp9336@utulsa.edu)
+Amy West (acw1471@utulsa.edu)
+```
+
+**TASK 3**
+
+**Input**
+```
+Banded sculpin, Cottus carolinae, 5
+Redspot chub, Nocomis asper, 5
+Northern hog sucker, Hypentelium nigricans, 6
+Creek chub, Semotilus atromaculatus, 8
+Stippled darter, Etheostoma punctulatum, 9
+Smallmouth bass, Micropterus dolomieu, 10
+Logperch, Percina caprodes, 13
+Slender madtom, Noturus exilis, 14
+```
+Regression expression used
+
+1. Finding genus species name `,\s+(\w+.\w+)` and replace with nothing.
+
+**Output**
+```
+Banded sculpin, 5
+Redspot chub, 5
+Northern hog sucker, 6
+Creek chub, 8
+Stippled darter, 9
+Smallmouth bass, 10
+Logperch, 13
+Slender madtom, 14
+```
+**TASK 4**
+
+Regression expression used
+
+1. Finding genus species name `,\s+(\w)\w+.(\w+)` and replacing it with `, \1_\2` 
+
+**Output**
+```
+Banded sculpin, C_carolinae, 5
+Redspot chub, N_asper, 5
+Northern hog sucker, H_nigricans, 6
+Creek chub, S_atromaculatus, 8
+Stippled darter, E_punctulatum, 9
+Smallmouth bass, M_dolomieu, 10
+Logperch, P_caprodes, 13
+Slender madtom, N_exilis, 14
+```
+**TASK 5**
+
+Regression expression used
+
+1. Finding genus species name and capturing first letter of genus and first three letters of species name `,\s+(\w)\w+.(\w{3})\w+` and replacing with `, \1_\2.`
+
+**Output**
+```
+Banded sculpin, C_car., 5
+Redspot chub, N_asp., 5
+Northern hog sucker, H_nig., 6
+Creek chub, S_atr., 8
+Stippled darter, E_pun., 9
+Smallmouth bass, M_dol., 10
+Logperch, P_cap., 13
+Slender madtom, N_exi., 14
+```
+### Working with Human protein FASTA files
+
+For making a file with all fasta headers:
+`grep '^>' GCF_000001405.40_GRCh38.p14_protein.faa > header_protein_homo.txt`
+
+**Output**
+```
+Anands-MacBook-Pro:Dr_toomey_class anandkarki$ head header_protein_homo.txt 
+>NP_000005.3 alpha-2-macroglobulin isoform a precursor [Homo sapiens]
+>NP_000006.2 arylamine N-acetyltransferase 2 [Homo sapiens]
+>NP_000007.1 medium-chain specific acyl-CoA dehydrogenase, mitochondrial isoform a precursor [Homo sapiens]
+>NP_000008.1 short-chain specific acyl-CoA dehydrogenase, mitochondrial isoform 1 precursor [Homo sapiens]
+>NP_000009.1 very long-chain specific acyl-CoA dehydrogenase, mitochondrial isoform 1 precursor [Homo sapiens]
+>NP_000010.1 acetyl-CoA acetyltransferase, mitochondrial isoform b precursor [Homo sapiens]
+>NP_000011.2 serine/threonine-protein kinase receptor R3 precursor [Homo sapiens]
+>NP_000012.1 presenilin-1 isoform I-467 [Homo sapiens]
+>NP_000013.2 adenosine deaminase isoform 1 [Homo sapiens]
+>NP_000014.1 alpha-sarcoglycan isoform 1 precursor [Homo sapiens]
+```
+
