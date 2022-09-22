@@ -1627,7 +1627,7 @@ Slender madtom, N_exi., 14</code></pre>
 </div>
 <div id="working-with-human-protein-fasta-files" class="section level3">
 <h3>Working with Human protein FASTA files</h3>
-<p>For making a file with all fasta headers:
+<p><strong>For making a file with all fasta headers:</strong>
 <code>grep &#39;^&gt;&#39; GCF_000001405.40_GRCh38.p14_protein.faa &gt; header_protein_homo.txt</code></p>
 <p><strong>Output</strong></p>
 <pre><code>Anands-MacBook-Pro:Dr_toomey_class anandkarki$ head header_protein_homo.txt 
@@ -1641,6 +1641,23 @@ Slender madtom, N_exi., 14</code></pre>
 &gt;NP_000012.1 presenilin-1 isoform I-467 [Homo sapiens]
 &gt;NP_000013.2 adenosine deaminase isoform 1 [Homo sapiens]
 &gt;NP_000014.1 alpha-sarcoglycan isoform 1 precursor [Homo sapiens]</code></pre>
+<p><strong>Creating a new file with ribosomal protein
+sequences</strong></p>
+<p><strong>Command line</strong></p>
+<p><code>sed -e &#39;s/&gt;/ \n&gt;/g&#39; GCF_000001405.40_GRCh38.p14_protein.faa |sed -n &#39;/ribosom/,/^ /p&#39; &gt; human_ribosomal.txt</code></p>
+<p><code>head human_ribosomal.txt</code></p>
+<p><strong>Output</strong></p>
+<pre><code>&gt;NP_000652.2 60S ribosomal protein L9 [Homo sapiens]
+MKTILSNQTVDIPENVDITLKGRTVIVKGPRGTLRRDFNHINVELSLLGKKKKRLRVDKWWGNRKELATVRTICSHVQNM
+IKGVTLGFRYKMRSVYAHFPINVVIQENGSLVEIRNFLGEKYIRRVRMRPGVACSVSQAQKDELILEGNDIELVSNSAAL
+IQQATTVKNKDIRKFLDGIYVSEKGTVQQADE
+ 
+&gt;NP_000958.1 60S ribosomal protein L3 isoform a [Homo sapiens]
+MSHRKFSAPRHGSLGFLPRKRSSRHRGKVKSFPKDDPSKPVHLTAFLGYKAGMTHIVREVDRPGSKVNKKEVVEAVTIVE
+TPPMVVVGIVGYVETPRGLRTFKTVFAEHISDECKRRFYKNWHKSKKKAFTKYCKKWQDEDGKKQLEKDFSSMKKYCQVI
+RVIAHTQMRLLPLRQKKAHLMEIQVNGGTVAEKLDWARERLEQQVPVNQVFGQDEMIDVIGVTKGKGYKGVTSRWHTKKL
+PRKTHRGLRKVACIGAWHPARVAFSVARAGQKGYHHRTEINKKIYKIGQGYLIKDGKLIKNNASTDYDLSDKSINPLGGF
+ </code></pre>
 </div>
 
 
